@@ -2,3 +2,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*CSS Variables*/
+:root {
+    --light-gray: #F5F6FA;
+    --purple-text: #6154F0;
+    --text: #9E9E9E;
+}
+
+/* Tailwind utility classes */
+@layer utilities {
+    .text-purple {color: var(--purple-text);}
+    .text-gray {color: var(--text);}
+
+    .bg-light-gray {color: var(--light-gray); }
+}
+
+html {
+    background: white;
+    display: center;
+    justify-content: center;
+    align-items: center;
+}
