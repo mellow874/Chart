@@ -8,19 +8,28 @@
     --light-gray: #F5F6FA;
     --purple-text: #6154F0;
     --text: #9E9E9E;
+    --help-icons: rgba(130, 130, 130, 1);
+    --btc: rgba(250, 188, 30, 1);
+    --btc-text: rgba(158, 158, 158, 1);
+   
 }
 
 /* Tailwind utility classes */
 @layer utilities {
     .text-purple {color: var(--purple-text);}
     .text-gray {color: var(--text);}
+    .text-help {color: var(--help-icons);}
+    .text-btc {color: var(--btc-text);}
 
     .bg-light-gray {color: var(--light-gray); }
+    .bg-gray {color: var(--text);}
+    .bg-help {color: var(--help-icons);}
+    .bg-btc {color: var(--btc);}
 }
 
-html {
-    background: white;
-    display: center;
-    justify-content: center;
-    align-items: center;
+
+
+.border-gray-rounded {
+  border: 1px solid rgba(158, 158, 158, 1); /* light gray */
+  border-radius: 10px;
 }
