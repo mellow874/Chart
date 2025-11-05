@@ -1,50 +1,63 @@
-import React from "react"; 
-//Imported react-icons
-import { FiPieChart, FiRepeat, FiCreditCard, FiMail, FiSettings, FiLogOut} from "react-icons/fi";
+import React from "react";
+//import icons
+import { FiPieChart, FiRepeat, FiCreditCard, FiMail, FiSettings, FiLogOut, FiX } from "react-icons/fi";
 import { AiFillAppstore } from "react-icons/ai";
+//import image
 import Logo from "../assets/Logo.png";
 
-export default function Navbar() {
+export default function Sidebar({ isOpen, onClose }) {
     return (
-        <div className="flex h-screen text-bg-light-gray">
+        <>
+            {/*overlay background on mobile view so you may focus on sidebar with toogle button*/}
+            <div className={`fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden ${isOpen ? 'block' : 'hidden'}`} onClick={onClose}></div>
 
-           {/*Sidebar*/}
-           <nav className="px-8 py-6  flex flex-col fixed w-[263px]  h-[1,025px] border-r border-r-[1px]">
-            {/*Logo*/}
-            <img src={Logo} className="flex items-center mb-10 gap-[20px]"/>
-            {/*Navlist */}
-            <ul className="flex flex-col gap-5  mb-4 pb-2 flex items-center text-gray">
-                <li className="text-purple text-left flex items-center gap-[20px] font-semibold"> 
-                    <AiFillAppstore className="text-xl"/>
-                    Overview       
-                    <span className="absolute right-10 top-20 text-3xl w-1 h-6 text-purple">.</span>         
-                </li>
-                <li className="flex text-left items-center  gap-[20px]"> {/*Ensures that the icon and it's name are inline */}
-                    <FiPieChart  />
-                    Chart
-                </li>
-                <li className="flex items-center ml-[50px] gap-[20px]"> 
-                    <FiRepeat />
-                    Transactions
-                </li>
-                <li className="flex items-center ml-[9px] gap-[20px]">
-                    <FiCreditCard />
-                    Wallet
-                </li>
-                <li className="flex items-center ml-[22px] gap-[20px]">
-                    <FiMail/>
-                    Mailbox
-                </li>
-                <li className="flex items-center ml-[14px] gap-[20px]">
-                    <FiSettings/>
-                    Setting
-                </li>
-                <li className="flex items-center ml-[15px] gap-[20px]">
-                    <FiLogOut/>
-                    Logout
-                </li>
-            </ul>
-           </nav>
-        </div>
+            {/* Sidebar fixed on the left, and slides in and out on mobile view*/}
+            <nav className={`fixed top-0 left-0 w-[263px] h-full bg-[#F4F5FA] px-8 py-6 flex flex-col z-50 transition-transform duration-300 ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0`}>
+                {/* toggle button available on mobile view, and allows user to close it*/}
+                <button className="lg:hidden absolute top-6 right-6 text-gray-600" onClick={onClose}>
+                    <FiX className="text-2xl" />
+                </button>
+
+                {/* Logo appears at the top of the list items*/}
+                <img src={Logo} className="flex items-center mb-10" alt="Logo"/>
+
+                {/* Sidebar list items, that include icons*/}
+                <ul className="flex flex-col gap-5 mb-4 pb-2 text-btc"> {/*Ensures that the list is in a row... */}
+                    
+                    {/* Purple list item, to show that it's active*/}
+                    <li className="text-purple flex items-center gap-[20px] font-semibold relative">
+                        <AiFillAppstore className="text-xl" />
+                        Overview
+                        <span className="absolute right-0 text-3xl w-1 h-6 text-purple">.</span>
+                    </li>
+
+                    {/* Sidebar menu items which are centred, and have got equal spacing*/}
+                    <li className="flex items-center gap-[20px]">
+                        <FiPieChart />
+                        Chart
+                    </li>
+                    <li className="flex items-center gap-[20px]">
+                        <FiRepeat />
+                        Transactions
+                    </li>
+                    <li className="flex items-center gap-[20px]">
+                        <FiCreditCard />
+                        Wallet
+                    </li>
+                    <li className="flex items-center gap-[20px]">
+                        <FiMail />
+                        Mailbox
+                    </li>
+                    <li className="flex items-center gap-[20px]">
+                        <FiSettings />
+                        Setting
+                    </li>
+                    <li className="flex items-center gap-[20px]">
+                        <FiLogOut />
+                        Logout
+                    </li>
+                </ul>
+            </nav>
+        </>
     );
 }
