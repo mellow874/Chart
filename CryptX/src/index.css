@@ -6,11 +6,13 @@
 /*CSS Variables*/
 :root {
     --light-gray: #F5F6FA;
-    --purple-text: #6154F0;
+    --purple-text: rgba(97, 84, 240, 1);
     --text: #9E9E9E;
     --help-icons: rgba(130, 130, 130, 1);
     --btc: rgba(250, 188, 30, 1);
     --btc-text: rgba(158, 158, 158, 1);
+    --sidebar: rgba(243, 243, 243, 1);
+    --main: rgb(220, 214, 214);
    
 }
 
@@ -25,6 +27,9 @@
     .bg-gray {color: var(--text);}
     .bg-help {color: var(--help-icons);}
     .bg-btc {color: var(--btc);}
+    .bg-sidebar {color: var(--sidebar);}
+    .bg-main {color: var(--main);}
+    
 }
 
 
