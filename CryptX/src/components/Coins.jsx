@@ -1,13 +1,12 @@
 import React from "react";
-
-//import images
+// Import chart logos
 import BTC from "../assets/BTC chartl.png";
 import ETH from "../assets/ETH chartl.png";
 import ADA from "../assets/ADA chartl.png";
 import ITC from "../assets/ITC chartl.png";
 
-
 export default function Coins() {
+  /* Array of coins, with objects that include, name, symbol, price, chart, and trend with a boolean too*/
   const coins = [
     {
       name: "Bitcoin",
@@ -15,6 +14,7 @@ export default function Coins() {
       image: BTC,
       price: "$40,291",
       trend: "+0.25%",
+      positive: true,
     },
     {
       name: "Ethereum",
@@ -22,66 +22,59 @@ export default function Coins() {
       image: ETH,
       price: "$18,291",
       trend: "+0.25%",
+      positive: true,
     },
     {
       name: "Litecoin",
-      symbol: "LTC",
+      symbol: "ITC",
       image: ITC,
       price: "$8,291",
       trend: "+0.25%",
- 
+      positive: true,
     },
     {
       name: "Cardano",
       symbol: "ADA",
       image: ADA,
       price: "$3,291",
-      trend: "-0.25%",
+      trend: "-2.05%",
+      positive: false,
     },
   ];
 
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+   return (
+    <>
+      {/* Array map that creates a card for each coin*/}
       {coins.map((coin, index) => (
-        <div
-          key={index}
-          className="bg-white rounded-2xl p-6  h-full shadow-md"
-        >
+        <div key={index} className="bg-white rounded-lg p-4 gap-4 card-style">
 
-             {/* Coin image */}
-            <img
-              src={coin.image}
-              alt={coin.name}
-              className="w-12 h-12 object-contain"
-            />
+          {/*Symbol and the trend*/}
+            <div className="flex items-center justify-between mb-3"> 
 
-          {/* Icon + change */}
-          <div className="flex items-center justify-between mb-4">
-            <div
-              className={`w-10 h-10 flex items-center justify-center rounded-lg ${coin.bg} ${coin.color} text-xl`}
-            >
-              {coin.icon}
-            </div>
-            <p
-              className={`text-sm font-semibold ${
-                coin.trend.startsWith("-")
-                  ? "text-red-500"
-                  : "text-green-500"
-              }`}
-            >
-              {coin.trend}
+            {/*Coin image*/}
+            <img src={coin.image} alt={coin.name} className="w-[52px] h-[52px] top[32px] left-[30px] object-contain"/>
+
+            {/*Trend indicator with two different colors */}
+            <p className={`text-sm font-semibold ${coin.positive ? "text-trend-green" : "text-trend-red"}`}>
+              {coin.positive ? "▲" : "▼"} {coin.trend}
             </p>
-          </div>
+         </div>
 
-          {/* Price + name */}
-          <div>
-            <h2 className="text-2xl font-bold text-gray-800">{coin.price}</h2>
-            <p className="text-sm text-gray-500 mt-1">
+          {/*Coin price and coin name below the coin image*/}
+          <div className="flex flex-col">
+            
+            {/*Coin price*/}
+            <h2 className="text-xl font-bold coin-value">
+              {coin.price}
+            </h2>
+
+            {/*Coin name and symbol*/}
+            <p className="text-sm text-coin">
               {coin.name} - {coin.symbol}
             </p>
           </div>
         </div>
       ))}
-    </div>
+    </>
   );
 }
