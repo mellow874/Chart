@@ -1,5 +1,5 @@
 import React from "react";
-// Import chart logos
+// Import chart images
 import BTC from "../assets/BTC chartl.png";
 import ETH from "../assets/ETH chartl.png";
 import ADA from "../assets/ADA chartl.png";
@@ -62,7 +62,7 @@ export default function Coins() {
 
           {/*Coin price and coin name below the coin image*/}
           <div className="flex flex-col">
-            
+
             {/*Coin price*/}
             <h2 className="text-xl font-bold coin-value">
               {coin.price}
