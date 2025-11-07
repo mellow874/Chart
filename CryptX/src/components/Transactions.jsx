@@ -52,7 +52,6 @@ export default function Transactions() {
                             alt={coin.name}
                             className="w-[50px] h-[50px] object-contain space-x-1"
                         />
-        
                     <div className="col-span-2 flex flex-col">
                             <p className="font-semibold space-x-2 text-gray-800">{coin.name}</p>
                             <p className="text-xs text-gray-500">{coin.transaction}</p>
