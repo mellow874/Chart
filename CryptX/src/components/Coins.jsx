@@ -2,7 +2,7 @@ import React from "react";
 // Import chart images
 import BTC from "../assets/BTC chartl.png";
 import ETH from "../assets/ETH chartl.png";
-import ADA from "../assets/Ada chartl.png";
+import ADA from "../assets/Ada-chartl.png";
 import ITC from "../assets/ITC chartl.png";
 
 export default function Coins() {
