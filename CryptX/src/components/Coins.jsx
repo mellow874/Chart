@@ -46,7 +46,7 @@ export default function Coins() {
     <>
       {/* Array map that creates a card for each coin*/}
       {coins.map((coin, index) => (
-        <div key={index} className="bg-white rounded-lg p-4 gap-4 card-style">
+        <div key={index} className="bg-white rounded-lg p-4 cols card-style">
 
           {/*Symbol and the trend*/}
             <div className="flex items-center justify-between mb-3"> 
@@ -61,7 +61,7 @@ export default function Coins() {
          </div>
 
           {/*Coin price and coin name below the coin image*/}
-          <div className="flex flex-col">
+          <div className="flex flex-col mt-10">
 
             {/*Coin price*/}
             <h2 className="text-xl font-bold coin-value">
