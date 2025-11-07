@@ -1,9 +1,16 @@
 import React from "react";
 //import icons
-import { FiPieChart, FiRepeat, FiCreditCard, FiMail, FiSettings, FiLogOut, FiX } from "react-icons/fi";
 import { AiFillAppstore } from "react-icons/ai";
+import {FiX } from "react-icons/fi";
 //import image
 import Logo from "../assets/Logo.png";
+import Logout from "../assets/logout.png";
+import sms from "../assets/sms.png";
+import walletminus from "../assets/wallet-minus.png";
+import wallet2 from "../assets/wallet-2.png";
+import Setting from "../assets/setting-2.png";
+import graph from "../assets/graph.png";
+
 
 export default function Sidebar({ isOpen, onClose }) {
     return (
@@ -22,38 +29,38 @@ export default function Sidebar({ isOpen, onClose }) {
                 <img src={Logo} className="flex items-center mb-10" alt="Logo"/>
 
                 {/* Sidebar list items, that include icons*/}
-                <ul className="flex flex-col gap-5 mb-4 pb-2 text-btc"> {/*Ensures that the list is in a row... */}
+                <ul className="flex flex-col gap-5 mb-4 pb-2 text-coin"> {/*Ensures that the list is in a row... */}
                     
                     {/* Purple list item, to show that it's active*/}
-                    <li className="text-purple flex items-center gap-[20px] font-semibold relative">
+                    <li className="text-purple flex items-center gap-5 font-semibold relative">
                         <AiFillAppstore className="text-xl" />
                         Overview
                         <span className="absolute right-0 text-3xl w-1 h-6 text-purple">.</span>
                     </li>
 
                     {/* Sidebar menu items which are centred, and have got equal spacing*/}
-                    <li className="flex items-center gap-[20px]">
-                        <FiPieChart />
+                    <li className="flex items-center gap-5">
+                        <img src={graph} alt="Chart" className="w-4 h-auto object-contain"/>
                         Chart
                     </li>
-                    <li className="flex items-center gap-[20px]">
-                        <FiRepeat />
+                    <li className="flex items-center gap-5">
+                        <img src={wallet2} alt="Wallet" className="w-4 h-auto object-contain"/>
                         Transactions
                     </li>
-                    <li className="flex items-center gap-[20px]">
-                        <FiCreditCard />
+                    <li className="flex items-center gap-5">
+                        <img src={walletminus} alt="Wallet Minus" className="w-4 h-auto object-contain"/>    
                         Wallet
                     </li>
-                    <li className="flex items-center gap-[20px]">
-                        <FiMail />
+                    <li className="flex items-center gap-5">
+                        <img src={sms} alt="SMS" className="w-4 h-auto object-contain"/>
                         Mailbox
                     </li>
-                    <li className="flex items-center gap-[20px]">
-                        <FiSettings />
+                    <li className="flex items-center gap-5">
+                       <img src={Setting} alt="Setting" className="w-4 h-auto object-contain"/>
                         Setting
                     </li>
-                    <li className="flex items-center gap-[20px]">
-                        <FiLogOut />
+                    <li className="flex items-center gap-5 ">
+                      <img src={Logout} alt="Logout" className="w-4 h-auto object-contain"/>
                         Logout
                     </li>
                 </ul>
