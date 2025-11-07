@@ -35,7 +35,7 @@ export default function Coins() {
     {
       name: "Cardano",
       symbol: "Ada",
-      image: ADA,
+      image: Ada,
       price: "$3,291",
       trend: "-2.05%",
       positive: false,
