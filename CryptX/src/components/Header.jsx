@@ -6,7 +6,7 @@ export default function Header({ onMenuClick }) {
         //Navigation bar at the top, with the searchbar, icons, and user profile
         <header className="w-full flex items-center justify-between px-8 py-4 bg-white border-b border-gray-200">
             
-            {/*Hamburger icon, that appears onlyon mobile view and when clicked the sidebar appears*/}
+            {/*Hamburger icon, that appears only on mobile view and when clicked the sidebar appears*/}
             <button className="lg:hidden text-gray-600" onClick={onMenuClick}>
 
                 {/*toggle button*/}
@@ -31,12 +31,10 @@ export default function Header({ onMenuClick }) {
                 {/* Help icon */}
                 <FiHelpCircle className="text-2xl" />
 
-                {/* --- Profile info ---
-                    - Displays user's avatar, name, username, and dropdown icon
-                */}
+                {/*User Profile information, with dropdown icon*/}
                 <div className="flex items-center gap-3">
-                    {/* User avatar */}
-                    <img src="/profile.jpg" className="w-8 h-8 rounded-full bg-help" alt="Profile" />
+                    {/* User profile avatar*/}
+                    <p className="w-10 h-10 rounded-full bg-help bg-gray-400"></p>
                     
                     {/*User profile details*/}
                     <div className="flex flex-col">
