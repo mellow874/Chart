@@ -4,8 +4,8 @@ import BTCLogo from "../assets/BTC logo.png";
 import BTCGraph from "../assets/BTC graph.png";
 import ETHLogo from "../assets/ETH logo.png";
 import ETHGraph from "../assets/ETH graph.png";
-import ADALogo from "../assets/ADA logo.png";
-import ADAGraph from "../assets/ADA graph.png";
+import ADALogo from "../assets/Ada logo.png";
+import ADAGraph from "../assets/Ada graph.png";
 import ITCLogo from "../assets/ITC logo.png";
 import ITCGraph from "../assets/ITC graph.png";
 
