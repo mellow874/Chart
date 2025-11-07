@@ -9,10 +9,12 @@
     --purple-text: rgba(97, 84, 240, 1);
     --text: #9E9E9E;
     --help-icons: rgba(130, 130, 130, 1);
-    --btc: rgba(250, 188, 30, 1);
-    --btc-text: rgba(158, 158, 158, 1);
+    --coin-text: rgba(158, 158, 158, 1);
     --sidebar: rgba(243, 243, 243, 1);
     --main: rgb(220, 214, 214);
+    --trend-red: rgba(255, 141, 77, 1);
+    --trend-green: rgba(30, 203, 79, 1);
+    --heading-text: rgba(26, 26, 26, 1);
    
 }
 
@@ -21,20 +23,78 @@
     .text-purple {color: var(--purple-text);}
     .text-gray {color: var(--text);}
     .text-help {color: var(--help-icons);}
-    .text-btc {color: var(--btc-text);}
+    .text-trend-red {color: var(--trend-red);}
+    .text-trend-green {color: var(--trend-green);}
+    .text-coin {color: var(--coin-text);}
+    .text-heading {color: var(--heading-text);}
 
     .bg-light-gray {color: var(--light-gray); }
     .bg-gray {color: var(--text);}
     .bg-help {color: var(--help-icons);}
-    .bg-btc {color: var(--btc);}
     .bg-sidebar {color: var(--sidebar);}
     .bg-main {color: var(--main);}
+    .bg-avatar {color: var(--coin-text);}
     
 }
-
-
 
 .border-gray-rounded {
   border: 1px solid rgba(158, 158, 158, 1); /* light gray */
   border-radius: 10px;
 }
+
+.card-style {
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+    width: 252px;
+    height: 205px;
+  }
+
+  .chart-style {
+    width: 534px;
+    height: 442px;
+    opacity: 1;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.05);
+
+  }
+
+  .card-text {
+    width: 86px;
+    height: 21px;
+    top: 155px;
+    left: 30px;
+    opacity: 1;
+  }
+
+  .arrow {
+    width: 18px;
+    height: 18px;
+    top: 48px;
+    left: 143px;
+    opacity: 1;
+  }
+
+  .coin-value {
+    width: 88px;
+    height: 42px;
+    font-size: 28px;
+    top: 108px;
+    left: 30px;
+    opacity: 1;
+  }
+
+  .market {
+    width: 104px;
+    height: 18px;
+    top: 58px;
+    left: 236px;
+    opacity: 0.8;
+  }
+
+  .transaction {
+    width: 320;
+    height: 352;
+    top: 623px;
+    left: 1054px;
+
+  }
