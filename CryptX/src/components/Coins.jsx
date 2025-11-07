@@ -2,7 +2,7 @@ import React from "react";
 // Import chart images
 import BTC from "../assets/BTC chartl.png";
 import ETH from "../assets/ETH chartl.png";
-import Ada from "../assets/Ada chartl.png";
+import ADA from "../assets/Ada chartl.png";
 import ITC from "../assets/ITC chartl.png";
 
 export default function Coins() {
@@ -34,8 +34,8 @@ export default function Coins() {
     },
     {
       name: "Cardano",
-      symbol: "Ada",
-      image: Ada,
+      symbol: "ADA",
+      image: ADA,
       price: "$3,291",
       trend: "-2.05%",
       positive: false,
